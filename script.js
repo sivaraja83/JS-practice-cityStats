@@ -1,5 +1,8 @@
 let button = document.querySelector("button");
 button.addEventListener("click",displaystats);
+let resultdiv = document.createElement('div');
+    resultdiv.id = 'result'
+    document.getElementById("wrapper").appendChild(resultdiv)
 
 function displaystats(){
     let input = document.getElementById("input");
@@ -34,10 +37,6 @@ function displaystats(){
             break
     }
     let text = `The Indian city of ${city} has a population of ${population}. Language spoken is ${language} and literacy rate is ${literacyrate}%`;
-    let resultdiv = document.createElement('div');
-    resultdiv.id = 'result'
-    document.getElementById("wrapper").appendChild(resultdiv)
-    
     document.getElementById("result").innerHTML=text
 
 }
